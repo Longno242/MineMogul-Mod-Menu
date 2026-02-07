@@ -9,7 +9,6 @@ namespace MineMoguul_Mod
         private Rect windowRect = new Rect(20, 20, 420, 650);
         private bool menuOpen = false;
 
-        // Existing toggles
         private bool fastMove;
         private bool bunnyHop;
         private bool airControl;
@@ -35,7 +34,6 @@ namespace MineMoguul_Mod
         private bool infiniteResearchTickets;
         private bool autoResearch;
 
-        // New toggles
         private bool infiniteGrabRange;
         private bool customFOV;
         private bool noBobbing;
@@ -72,7 +70,6 @@ namespace MineMoguul_Mod
 
         void SyncTogglesToMods()
         {
-            // Existing
             Mods.fastMove = fastMove;
             Mods.bunnyHop = bunnyHop;
             Mods.airControl = airControl;
@@ -94,8 +91,6 @@ namespace MineMoguul_Mod
             Mods.freeShopping = freeShopping;
             Mods.sellMultiplierEnabled = sellMultiplierEnabled;
             Mods.autoSellEnabled = autoSellEnabled;
-
-            // New
             Mods.selectiveFreeShopping = selectiveFreeShopping;
             Mods.infiniteGrabRange = infiniteGrabRange;
             Mods.customFOV = customFOV;
@@ -179,7 +174,6 @@ namespace MineMoguul_Mod
             superJump = GUI.Toggle(new Rect(170, yPos, 150, 20), superJump, "Super Jump");
             yPos += 35;
 
-            // NEW: Infinite Grab Range
             GUI.Label(new Rect(10, yPos, 200, 20), "Interaction:");
             yPos += 25;
             infiniteGrabRange = GUI.Toggle(new Rect(10, yPos, 180, 20), infiniteGrabRange, "Infinite Grab Range");
@@ -242,7 +236,6 @@ namespace MineMoguul_Mod
             esp = GUI.Toggle(new Rect(10, yPos, 150, 20), esp, "General ESP");
             yPos += 35;
 
-            // NEW: Custom FOV
             customFOV = GUI.Toggle(new Rect(10, yPos, 150, 20), customFOV, "Custom FOV");
             yPos += 25;
 
@@ -253,7 +246,6 @@ namespace MineMoguul_Mod
                 yPos += 35;
             }
 
-            // NEW: No Bobbing
             noBobbing = GUI.Toggle(new Rect(10, yPos, 150, 20), noBobbing, "No Bobbing");
             yPos += 35;
 
@@ -527,4 +519,5 @@ namespace MineMoguul_Mod
             infiniteGrabRange = false;
         }
     }
+
 }
